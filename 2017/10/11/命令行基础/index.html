@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>命令行基础 | ponyedey</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="ponyedey">
+    <meta name="author" content="mondee">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="ponyedey" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">ponyedey</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-10-11T12:28:31.000Z" itemprop="datePublished">
+          2017-10-11
+      </time>
+    
+</span>
+                <h1>命令行基础</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><p>命令行是啥？一串一串一串一串的字符串？是不是觉得GUI界面简单明了好用的多。但是作为一个前端程序员，如果我们不会命令行，局限性就会很大。<br>其实Linux也不是很难呀，首先可以看到我们的教程中<br>| 英文 | 翻译 |<br>| — | — |<br>| directory | 目录、文件夹 |<br>| file | 文件 |<br>| make | 新建 |<br>| remove | 删除 |<br>| move | 移动 |<br>| copy | 复制 |<br>| list | 罗列 |<br>| link | 链接 |<br>| find | 查找 |<br>| echo | 发出回音、重复 |<br>| touch | 触摸 |<br>| change | 改变 |<br>是不是都是很简单的英文单词？学Linux先把这些单词背牢了，就能开始学习了</p>
+<h2 id="接下来说说简单的命令"><a href="#接下来说说简单的命令" class="headerlink" title="接下来说说简单的命令"></a>接下来说说简单的命令</h2><ol>
+<li><code>cd ~/Desktop</code> 进入桌面</li>
+<li><code>mkdir demo-1</code> 创建目录，这时你可以切到桌面，看到 demo-1 目录</li>
+<li><code>rm -rf demo-1</code> 删除目录</li>
+<li><code>touch 1.txt</code> 创建文件，如果你发现文件后缀不见了，请让该死的 Windows 显示文件后缀</li>
+<li><code>mv 1.txt 2.txt</code> 这样我们就把 1.txt 移到 2.txt 了，也就是重命名</li>
+</ol>
+<h2 id="绝对路径与相对路径的区别"><a href="#绝对路径与相对路径的区别" class="headerlink" title="绝对路径与相对路径的区别"></a>绝对路径与相对路径的区别</h2><ul>
+<li>简单而言，以/开头的路径，即为绝对路径</li>
+<li>绝对路径的意义在于，这个路径是已经确定了的</li>
+</ul>
+<h2 id="常见的自带命令"><a href="#常见的自带命令" class="headerlink" title="常见的自带命令"></a>常见的自带命令</h2><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>进入目录</td>
+<td>cd</td>
+</tr>
+<tr>
+<td>显示当前目录</td>
+<td>pwd</td>
+</tr>
+<tr>
+<td>创建目录</td>
+<td>mkdir 目录名</td>
+</tr>
+<tr>
+<td>创建目录</td>
+<td>mkdir -p 目录路径</td>
+</tr>
+<tr>
+<td>我是谁</td>
+<td>whoami</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>查看路径</td>
+<td>ls 路径</td>
+</tr>
+<tr>
+<td>查看路径</td>
+<td>ls -a 路径</td>
+</tr>
+<tr>
+<td>查看路径</td>
+<td>ls -l 路径</td>
+</tr>
+<tr>
+<td>查看路径</td>
+<td>ls -al 路径</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>创建文件</td>
+<td>echo ‘1’ &gt; 文件路径</td>
+</tr>
+<tr>
+<td>强制创建文件</td>
+<td>echo ‘1’ &gt;! 文件路径</td>
+</tr>
+<tr>
+<td>追加文件内容</td>
+<td>echo ‘1’ &gt;&gt; 文件路径</td>
+</tr>
+<tr>
+<td>创建文件</td>
+<td>touch 文件名</td>
+</tr>
+<tr>
+<td>改变文件更新时间</td>
+<td>touch 文件名</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>复制文件</td>
+<td>cp 源路径 目标路径</td>
+</tr>
+<tr>
+<td>复制目录</td>
+<td>cp -r 源路径 目标路径</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>移动节点</td>
+<td>mv 源路径 目标路径</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>删除文件</td>
+<td>rm 文件路径</td>
+</tr>
+<tr>
+<td>强制删除文件</td>
+<td>rm -f 文件路径</td>
+</tr>
+<tr>
+<td>删除目录</td>
+<td>rm -r 目录路径</td>
+</tr>
+<tr>
+<td>强制删除目录</td>
+<td>rm -rf 目录路径</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>查看目录结构</td>
+<td>tree</td>
+</tr>
+<tr>
+<td>建立软链接</td>
+<td>ln -s 真实文件 链接</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>下载文件</td>
+<td>curl -L <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a> &gt; baidu.html</td>
+</tr>
+<tr>
+<td>拷贝网页</td>
+<td>wget -p -H -e robots=off <a href="https://www.baidu.com" target="_blank" rel="external">https://www.baidu.com</a></td>
+</tr>
+<tr>
+<td>磁盘占用</td>
+<td>df -kh</td>
+</tr>
+<tr>
+<td>当前目录大小</td>
+<td>du -sh .</td>
+</tr>
+<tr>
+<td>各文件大小</td>
+<td>du -h</td>
+</tr>
+</tbody>
+</table>
+<p><a href="www.google.hk">其实有个更好的学习命令行的办法</a></p>
+<h2 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h2><p>这个略难，博主目前还不能很好地使用，还用的是VScode<br>博主的老师推荐，入门vim的话，以下为三个教程：</p>
+<ol>
+<li>在命令行输入 vimtutor ，即可查看官方自带的中文教程。看完它。</li>
+<li><a href="http://coolshell.cn/articles/5426.html" target="_blank" rel="external">简明VIM练级攻略</a></li>
+<li><a href="https://vim-adventures.com/" target="_blank" rel="external">一个vim游戏</a></li>
+</ol>
+<h2 id="接下来说说Git操作手册"><a href="#接下来说说Git操作手册" class="headerlink" title="接下来说说Git操作手册"></a>接下来说说Git操作手册</h2><ol>
+<li>首先，注册一个GitHub账号</li>
+<li>进入<a href="https://github.com/settings/keys，一个空的账号这里的key应该是空的，如果有你不认识的key就把他们全部删除吧！" target="_blank" rel="external">https://github.com/settings/keys，一个空的账号这里的key应该是空的，如果有你不认识的key就把他们全部删除吧！</a></li>
+<li>点击New SSH key，但是我现在没有key呀。怎么办？往下</li>
+<li>打开Git Bash</li>
+<li>复制运行<code>rm -rf ~/.ssh/*</code> 把现有的ssh key都删除。建议复制运行哟。</li>
+<li>运行`ssh-keygen -t rsa -b 4096 -C “你的邮箱！双引号内改成你的邮箱！”</li>
+<li>三次回车</li>
+<li>运行<code>cat ~/.ssh/id_rsa.pub</code>，得到一串字符，完整的复制它。</li>
+<li>回到第三部，在title输入【你的第一个Key】，我猜应该是你的第一个Key。</li>
+<li>在key粘贴刚刚复制的字符串。</li>
+<li>点击Add SSH key</li>
+<li>回到Git Bash</li>
+<li>运行<code>ssh -T git@github.com</code>，这样你可能会看见 ![]{<a href="https://i.loli.net/2017/10/11/59de165e8ed2b.png}回答yes" target="_blank" rel="external">https://i.loli.net/2017/10/11/59de165e8ed2b.png}回答yes</a></li>
+<li>然后如果你看到<code>Permission denied (publickey).</code>就说明你失败了，请回到第一步重来。如果看到的是<code>Hi xxx!You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>说明添加SSH key成功了！想了解更多SSH key原理点<a href="http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html" target="_blank" rel="external">这</a></li>
+</ol>
+<ul>
+<li>一台电脑仅需要一个SSH key</li>
+<li>一个SSH key可以访问你所有的仓库</li>
+<li>新买的电脑，就新生成一个SSH key，并把它上传到GitHub</li>
+<li>如果删了之前的key，重新生成一个不就好了吗</li>
+</ul>
+<h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><p>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git config --global user.name 你的英文名</div><div class="line">git config --global user.email 你的邮箱</div><div class="line">git config --global push.default matching</div><div class="line">git config --global core.quotepath false</div><div class="line">git config --global core.editor &quot;vim&quot;</div><div class="line">\</div></pre></td></tr></table></figure></p>
+<h2 id="1-只在本地使用"><a href="#1-只在本地使用" class="headerlink" title="1. 只在本地使用"></a>1. 只在本地使用</h2><h3 id="1-1-初始化"><a href="#1-1-初始化" class="headerlink" title="1.1 初始化"></a>1.1 初始化</h3><ol>
+<li>创建目录作为我们的项目目录：<code>mkdir git-demo-1</code></li>
+<li>进入目录 <code>cd git-demo-1</code></li>
+<li><code>git init</code>，这句命令会在 git-demo-1 里创建一个 .git 目录</li>
+<li><code>ls -la</code> 你就会看到 .git 目录，它就是一个「仓库」，不要进去看，这仓库里面有毒，别进去！</li>
+<li><p>在 git-demo-1 目录里面添加任意文件，假设我们添加了两个文件，分别是 index.html 和 css/style.css<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">touch index.html</div><div class="line">mkdir css</div><div class="line">touch css/style.css</div><div class="line">\</div></pre></td></tr></table></figure></p>
+</li>
+<li><p>运行 <code>git status -sb</code> 可以看到文件前面有 ?? 号<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> ## Initial commit on master</div><div class="line"> ?? css/</div><div class="line"> ?? index.html</div><div class="line">\</div></pre></td></tr></table></figure></p>
+</li>
+</ol>
+<p>这个 <code>??</code> 表示 git 一脸懵逼，不知道你要怎么对待这些变动。<br>使用 <code>git add</code> 将文件添加到「暂存区」<br>你可以一个一个地 add<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add index.html</div><div class="line">git add css/style.css</div><div class="line">\</div></pre></td></tr></table></figure></p>
+<p>你也可以一次性 add<br><code>git add</code> . 意思是把当前目录（.表示当前目录）里面的变动都加到「暂存区」<br>再次运行 <code>git status -sb</code>，可以看到 <code>??</code> 变成了 <code>A</code><br> \<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">## Initial commit on master</div><div class="line">A  css/style.css</div><div class="line">A  index.html</div><div class="line">\</div></pre></td></tr></table></figure></p>
+<p><code>A</code> 的意思就是添加，也就是说你告诉 git，这些文件我要加到仓库里<br>使用 <code>git commit -m &quot;信息&quot;</code> 将你 add 过的内容「正式提交」到本地仓库（.git就是本地仓库），并添加一些注释信息，方便日后查阅<br>你可以一个一个地 commit<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">`git commit index.html -m &apos;添加index.html&apos;</div><div class="line">`git commit css/style.css -m &quot;添加 css/style.css&quot;</div><div class="line">\</div></pre></td></tr></table></figure></p>
+<p>你也可以一次性 commit<br><code>git commit . -m &quot;添加了几个文件&quot;</code><br>再再次运行 <code>git status -sb</code>，发现没有文件变动了，这是因为文件的变动已经记录在仓库里了。<br>这时你使用 <code>git log</code> 就可以看到历史上的变动：<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> commit f0d95058cd32a332b98967f6c0a701c64a00810a</div><div class="line"> Author: frankfang &lt;frankfang1990@gmail.com&gt;</div><div class="line"> Date:   Thu Sep 28 22:30:43 2017 +0800</div><div class="line"></div><div class="line">     添加几个文件</div><div class="line">\</div></pre></td></tr></table></figure></p>
+<p>以上就是 <code>git add / git commit</code> 的一次完整过程，可以看到，挺复杂的。原则上，你错了任何一步，就给我从头来一遍，做到你不会再手抖为止。</p>
+<p>-总结以下，博主觉得照搬老师的教程意义不是很大，这边如果有朋友有幸（恰巧）逛了我的博客，想了解怎么配置github，可以加博主的私人V:shdfgurhg，注明来意，一起交流~</p>
+<h2 id="Hexo教程"><a href="#Hexo教程" class="headerlink" title="Hexo教程"></a>Hexo教程</h2><ul>
+<li>你们以为我会写吗</li>
+<li>我才不写</li>
+<li>在之前的博客有提到</li>
+</ul>
+<h2 id="命令行技巧"><a href="#命令行技巧" class="headerlink" title="命令行技巧"></a>命令行技巧</h2><ul>
+<li>待更新</li>
+<li>暂时只了解了一些.bashrc文件的功能，但是它的确很强大</li>
+<li>可以帮助缩写命令，省略输入的路径，打开Git Bash时能够给你发送一些信息等等。</li>
+</ul>
+<p>暂时到这吧，想到了啥以后再补充。2017-10-11 21:18:11</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2017/10/11/计算机是如何存储数据的/">
+        计算机是如何存储数据的 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By mondee. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
