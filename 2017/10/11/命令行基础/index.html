@@ -181,7 +181,10 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><p>命令行是啥？一串一串一串一串的字符串？是不是觉得GUI界面简单明了好用的多。但是作为一个前端程序员，如果我们不会命令行，局限性就会很大。<br>其实Linux也不是很难呀，首先可以看到我们的教程中<br>| 英文 | 翻译 |<br>| — | — |<br>| directory | 目录、文件夹 |<br>| file | 文件 |<br>| make | 新建 |<br>| remove | 删除 |<br>| move | 移动 |<br>| copy | 复制 |<br>| list | 罗列 |<br>| link | 链接 |<br>| find | 查找 |<br>| echo | 发出回音、重复 |<br>| touch | 触摸 |<br>| change | 改变 |<br>是不是都是很简单的英文单词？学Linux先把这些单词背牢了，就能开始学习了</p>
+      		<h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><ul>
+<li>命令行是啥？一串一串一串一串的字符串？是不是觉得GUI界面简单明了好用的多。但是作为一个前端程序员，如果我们不会命令行，局限性就会很大。</li>
+<li>其实Linux也不是很难呀，首先可以看到我们的教程中<br>| 英文 | 翻译 |<br>| — | — |<br>| directory | 目录、文件夹 |<br>| file | 文件 |<br>| make | 新建 |<br>| remove | 删除 |<br>| move | 移动 |<br>| copy | 复制 |<br>| list | 罗列 |<br>| link | 链接 |<br>| find | 查找 |<br>| echo | 发出回音、重复 |<br>| touch | 触摸 |<br>| change | 改变 |<br>是不是都是很简单的英文单词？学Linux先把这些单词背牢了，就能开始学习了</li>
+</ul>
 <h2 id="接下来说说简单的命令"><a href="#接下来说说简单的命令" class="headerlink" title="接下来说说简单的命令"></a>接下来说说简单的命令</h2><ol>
 <li><code>cd ~/Desktop</code> 进入桌面</li>
 <li><code>mkdir demo-1</code> 创建目录，这时你可以切到桌面，看到 demo-1 目录</li>
@@ -372,23 +375,48 @@
 <li>新买的电脑，就新生成一个SSH key，并把它上传到GitHub</li>
 <li>如果删了之前的key，重新生成一个不就好了吗</li>
 </ul>
-<h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><p>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git config --global user.name 你的英文名</div><div class="line">git config --global user.email 你的邮箱</div><div class="line">git config --global push.default matching</div><div class="line">git config --global core.quotepath false</div><div class="line">git config --global core.editor &quot;vim&quot;</div><div class="line">\</div></pre></td></tr></table></figure></p>
+<h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git config --global user.name 你的英文名</div><div class="line">git config --global user.email 你的邮箱</div><div class="line">git config --global push.default matching</div><div class="line">git config --global core.quotepath false</div><div class="line">git config --global core.editor &quot;vim&quot;</div></pre></td></tr></table></figure>
 <h2 id="1-只在本地使用"><a href="#1-只在本地使用" class="headerlink" title="1. 只在本地使用"></a>1. 只在本地使用</h2><h3 id="1-1-初始化"><a href="#1-1-初始化" class="headerlink" title="1.1 初始化"></a>1.1 初始化</h3><ol>
 <li>创建目录作为我们的项目目录：<code>mkdir git-demo-1</code></li>
 <li>进入目录 <code>cd git-demo-1</code></li>
 <li><code>git init</code>，这句命令会在 git-demo-1 里创建一个 .git 目录</li>
 <li><code>ls -la</code> 你就会看到 .git 目录，它就是一个「仓库」，不要进去看，这仓库里面有毒，别进去！</li>
-<li><p>在 git-demo-1 目录里面添加任意文件，假设我们添加了两个文件，分别是 index.html 和 css/style.css<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">touch index.html</div><div class="line">mkdir css</div><div class="line">touch css/style.css</div><div class="line">\</div></pre></td></tr></table></figure></p>
+<li><p>在 git-demo-1 目录里面添加任意文件，假设我们添加了两个文件，分别是 index.html 和 css/style.css</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">touch index.html</div><div class="line">mkdir css</div><div class="line">touch css/style.css</div></pre></td></tr></table></figure>
 </li>
-<li><p>运行 <code>git status -sb</code> 可以看到文件前面有 ?? 号<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> ## Initial commit on master</div><div class="line"> ?? css/</div><div class="line"> ?? index.html</div><div class="line">\</div></pre></td></tr></table></figure></p>
+<li><p>运行 <code>git status -sb</code> 可以看到文件前面有 ?? 号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">## Initial commit on master</div><div class="line">?? css/</div><div class="line">?? index.html</div></pre></td></tr></table></figure>
+</li>
+<li><p>这个 <code>??</code> 表示 git 一脸懵逼，不知道你要怎么对待这些变动。</p>
+</li>
+<li>使用 <code>git add</code> 将文件添加到「暂存区」</li>
+<li><p>你可以一个一个地 add</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add index.html</div><div class="line">git add css/style.css</div></pre></td></tr></table></figure>
+</li>
+<li><p>你也可以一次性 add</p>
+</li>
+<li><code>git add</code> . 意思是把当前目录（.表示当前目录）里面的变动都加到「暂存区」</li>
+<li><p>再次运行 <code>git status -sb</code>，可以看到 <code>??</code> 变成了 <code>A</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">## Initial commit on master</div><div class="line">A  css/style.css</div><div class="line">A  index.html</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>A</code> 的意思就是添加，也就是说你告诉 git，这些文件我要加到仓库里</p>
+</li>
+<li>使用 <code>git commit -m &quot;信息&quot;</code> 将你 add 过的内容「正式提交」到本地仓库（.git就是本地仓库），并添加一些注释信息，方便日后查阅</li>
+<li><p>你可以一个一个地 commit</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">`git commit index.html -m &apos;添加index.html&apos;</div><div class="line">`git commit css/style.css -m &quot;添加 css/style.css&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p>你也可以一次性 commit<br><code>git commit . -m &quot;添加了几个文件&quot;</code></p>
+</li>
+<li>再再次运行 <code>git status -sb</code>，发现没有文件变动了，这是因为文件的变动已经记录在仓库里了。</li>
+<li><p>这时你使用 <code>git log</code> 就可以看到历史上的变动：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">commit f0d95058cd32a332b98967f6c0a701c64a00810a</div><div class="line">Author: frankfang &lt;frankfang1990@gmail.com&gt;</div><div class="line">Date:   Thu Sep 28 22:30:43 2017 +0800</div><div class="line"></div><div class="line">    添加几个文件</div></pre></td></tr></table></figure>
+</li>
+<li><p>以上就是 <code>git add / git commit</code> 的一次完整过程，可以看到，挺复杂的。原则上，你错了任何一步，就给我从头来一遍，做到你不会再手抖为止。</p>
 </li>
 </ol>
-<p>这个 <code>??</code> 表示 git 一脸懵逼，不知道你要怎么对待这些变动。<br>使用 <code>git add</code> 将文件添加到「暂存区」<br>你可以一个一个地 add<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add index.html</div><div class="line">git add css/style.css</div><div class="line">\</div></pre></td></tr></table></figure></p>
-<p>你也可以一次性 add<br><code>git add</code> . 意思是把当前目录（.表示当前目录）里面的变动都加到「暂存区」<br>再次运行 <code>git status -sb</code>，可以看到 <code>??</code> 变成了 <code>A</code><br> \<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">## Initial commit on master</div><div class="line">A  css/style.css</div><div class="line">A  index.html</div><div class="line">\</div></pre></td></tr></table></figure></p>
-<p><code>A</code> 的意思就是添加，也就是说你告诉 git，这些文件我要加到仓库里<br>使用 <code>git commit -m &quot;信息&quot;</code> 将你 add 过的内容「正式提交」到本地仓库（.git就是本地仓库），并添加一些注释信息，方便日后查阅<br>你可以一个一个地 commit<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">`git commit index.html -m &apos;添加index.html&apos;</div><div class="line">`git commit css/style.css -m &quot;添加 css/style.css&quot;</div><div class="line">\</div></pre></td></tr></table></figure></p>
-<p>你也可以一次性 commit<br><code>git commit . -m &quot;添加了几个文件&quot;</code><br>再再次运行 <code>git status -sb</code>，发现没有文件变动了，这是因为文件的变动已经记录在仓库里了。<br>这时你使用 <code>git log</code> 就可以看到历史上的变动：<br>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> commit f0d95058cd32a332b98967f6c0a701c64a00810a</div><div class="line"> Author: frankfang &lt;frankfang1990@gmail.com&gt;</div><div class="line"> Date:   Thu Sep 28 22:30:43 2017 +0800</div><div class="line"></div><div class="line">     添加几个文件</div><div class="line">\</div></pre></td></tr></table></figure></p>
-<p>以上就是 <code>git add / git commit</code> 的一次完整过程，可以看到，挺复杂的。原则上，你错了任何一步，就给我从头来一遍，做到你不会再手抖为止。</p>
-<p>-总结以下，博主觉得照搬老师的教程意义不是很大，这边如果有朋友有幸（恰巧）逛了我的博客，想了解怎么配置github，可以加博主的私人V:shdfgurhg，注明来意，一起交流~</p>
+<ul>
+<li>总结以下，博主觉得照搬老师的教程意义不是很大，这边如果有朋友有幸（恰巧）逛了我的博客，想了解怎么配置github，可以加博主的私人V:shdfgurhg，注明来意，一起交流~</li>
+</ul>
 <h2 id="Hexo教程"><a href="#Hexo教程" class="headerlink" title="Hexo教程"></a>Hexo教程</h2><ul>
 <li>你们以为我会写吗</li>
 <li>我才不写</li>
