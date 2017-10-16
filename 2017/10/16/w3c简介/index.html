@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>脚本 | ponyedey</title>
+  <title>w3c简介 | ponyedey</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -172,63 +172,30 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2017-10-12T10:38:00.000Z" itemprop="datePublished">
-          2017-10-12
+      <time datetime="2017-10-16T11:27:40.000Z" itemprop="datePublished">
+          2017-10-16
       </time>
     
 </span>
-                <h1>脚本</h1>
+                <h1>w3c简介</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h2 id="脚本是啥"><a href="#脚本是啥" class="headerlink" title="脚本是啥"></a>脚本是啥</h2><ul>
-<li>看到脚本，很多同学会不会和博主我是一个想法，这是不是游戏外挂啊？</li>
-<li>其实也可以这么了解，脚本就是写的一个小程序，计算机根据你的命令执行这个程序，从而减少一些重复繁琐的工作，是不是很方便。</li>
+      		<h2 id="w3c万维网联盟"><a href="#w3c万维网联盟" class="headerlink" title="w3c万维网联盟"></a>w3c万维网联盟</h2><ul>
+<li>由李爵士成立<h2 id="标准"><a href="#标准" class="headerlink" title="标准"></a>标准</h2></li>
+<li>解决web应用中不同平台、技术和开发者带来的不兼容问题，保障Web信息的顺利和完整流通，万维网联盟制定了一系列标准并督促Web应用开发者和内容提供者遵循这些标准。标准的内容包括使用语言的规范，开发中使用的导则和解释引擎的行为等等。W3C也制定了包括XML和CSS等的众多影响深远的标准规范。</li>
+<li>但是，W3C制定的web标准似乎并非强制而只是推荐标准。因此部分网站仍然不能完全实现这些标准。特别是使用早期所见即所得网页编辑软件设计的网页往往会包含大量非标准代码。</li>
+<li><a href="https://zh.wikipedia.org/wiki/%E4%B8%87%E7%BB%B4%E7%BD%91%E8%81%94%E7%9B%9F" target="_blank" rel="external">w3c完整简介</a></li>
 </ul>
-<ol>
-<li>在GitBash中，执行脚本程序常用sh命令，即<code>sh xxx</code></li>
-<li>请记住，nodejs和GitBash都是可以执行脚本的，只是他们识别的命令不同，所以撰写脚本使用的语言有所改变，需要变通。并且不需要刻意去死记硬背。<a href="www.google.hk">完美的nodejs使用教程点我</a></li>
-<li>在GitBash中，也可以省略掉sh命令，即直接<code>sh xxx</code>变成<code>xxx</code></li>
-</ol>
-<ul>
-<li><p>以下贴出博主写的一个简单的脚本(GitBash环境下的)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">if [ -d $1 ]; then</div><div class="line">  exit 1</div><div class="line">else</div><div class="line">  mkdir $1</div><div class="line">  cd $1</div><div class="line">  mkdir css js</div><div class="line">  touch index.html css/style.css js/main.js</div><div class="line">  echo -e &quot;&lt;!DOCTYPE&gt; \n&lt;title&gt;Hello&lt;/title&gt; \n&lt;h1&gt;Hi&lt;/h1&gt;&quot; &gt;&gt; index.html</div><div class="line">  echo -e &quot;h1&#123;color: red;&#125;&quot; &gt;&gt; css/style.css</div><div class="line">  echo -e &quot;var string = &apos;Hello World&apos; \nalert(string)&quot; &gt;&gt; js/main.js</div><div class="line">  echo &apos;success&apos;</div><div class="line">  exit 0</div><div class="line">fi</div></pre></td></tr></table></figure>
-</li>
-<li><p>以及博主的nodejs的脚本(当然都是抄来的哈哈哈哈哈)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">var fs = require(&apos;fs&apos;)</div><div class="line"></div><div class="line">var dirName = process.argv[2]</div><div class="line"></div><div class="line">process.chdir(&quot;/users/Administrator/desktop&quot;)</div><div class="line">if (!fs.existsSync(&quot;./&quot; + dirName)) &#123;</div><div class="line">    fs.mkdirSync(&quot;./&quot; + dirName)</div><div class="line">    process.chdir(&quot;./&quot; + dirName)</div><div class="line">    fs.mkdirSync(&apos;css&apos;)</div><div class="line">    fs.mkdirSync(&apos;js&apos;)</div><div class="line"></div><div class="line">    fs.writeFileSync(&quot;./index.html&quot;, &quot;&lt;!DOCTYPE&gt; \n&lt;title&gt;Hello&lt;/title&gt; \n &lt;h1&gt;Hi&lt;/h1&gt;&quot;)</div><div class="line">    fs.writeFileSync(&quot;css/style.css&quot;, &quot;h1&#123;color: red;&#125;&quot;)</div><div class="line">    fs.writeFileSync(&quot;./js/main.js&quot;, &quot;var string = &apos;Hello World&apos; \nalert(string)&quot;)</div><div class="line"></div><div class="line">    console.log(&quot;success&quot;)</div><div class="line">    process.exit(0)</div><div class="line">&#125; else &#123;</div><div class="line">    console.log(dirName + &quot;exists&quot;)</div><div class="line">    process.exit(1)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="额外的两个命令行"><a href="#额外的两个命令行" class="headerlink" title="额外的两个命令行"></a>额外的两个命令行</h2><ul>
-<li><code>demo &amp;&amp; echo &#39;结束&#39;</code>  代表运行demo脚本，运行成功后显示结束</li>
-<li><code>demo || echo &#39;结束&#39;</code>  代表运行demo脚本，运行失败后显示结束</li>
-<li>这里也就能够很好地了解返回值</li>
-</ul>
-<h2 id="讲一下-bashrc吧"><a href="#讲一下-bashrc吧" class="headerlink" title="讲一下.bashrc吧"></a>讲一下.bashrc吧</h2><ul>
-<li>GitBash也是一种脚本，.bashrc就是设置GitBash简便用法的一个文件<h3 id="它可以"><a href="#它可以" class="headerlink" title="它可以"></a>它可以</h3></li>
-</ul>
-<ol>
-<li>缩减命令</li>
-<li>省略输入的路径</li>
-<li>给你温馨的问候哟</li>
-<li>自己谷歌！</li>
-</ol>
-<ul>
-<li>这里要讲两个命令，在运行demo脚本时，<code>type demo</code>可以看到寻找过程，<code>which demo</code>可以看到寻找结果。从这里可以了解我们在.bashrc路径设置的对不对。</li>
-</ul>
-<p>来自饥人谷<a href="https://xiedaimala.com" target="_blank" rel="external">（点我）</a></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2017/10/16/w3c简介/" style="float: left;">
-        ← w3c简介
-    </a>
     
-    
-    <a class="pull-right" href="/2017/10/11/命令行基础/">
-        命令行基础 →
+    <a class="pull-right" href="/2017/10/12/脚本/">
+        脚本 →
     </a>
     
 </nav>
