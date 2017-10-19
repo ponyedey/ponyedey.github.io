@@ -189,38 +189,114 @@
 </ul>
 <ol>
 <li>div和span标签，实在很难理解其他标签或者记不住的话，就记这两个，一招鲜吃遍天。</li>
-<li>a标签中，target=”_top”或”_parent”或”_self”或”_blank”分别是在最高级页面或iframe、父页面或iframe、当前页面、新开页面打开网页。</li>
-<li>iframe嵌套标签，理解是在当前页面嵌入一个页面。目前用的较少，相关笔记回家再补。</li>
-<li>form标签，既可以实现GET也可以实现POST。action标签决定请求路径，method标签决定请求行为。a标签是发起GET请求。都是跳转页面。</li>
-<li>当存在button元素时，若没有定义input type，则button会自动升级为提交按钮。</li>
-<li>JavaScript伪协议是为了能够在html中执行javascript代码，或者是可以在点击a标签时，页面没有跳转。</li>
-<li>关于table标签需要回去再复习一下，这里做个标记<br>—————————分割线又来了———————————–<h2 id="补充的一些知识"><a href="#补充的一些知识" class="headerlink" title="补充的一些知识"></a>补充的一些知识</h2></li>
-<li>iframe，例如js bin，你写的代码都是放在iframe标签中展示。不信可以去js.jirengu.com去检查</li>
+<li><code>a</code>标签中，<code>target=&quot;_top&quot;</code>或<code>&quot;_parent&quot;</code>或<code>&quot;_self&quot;</code>或<code>&quot;_blank&quot;</code>分别是在最高级页面或<code>iframe</code>、父页面或<code>iframe</code>、当前页面、新开页面打开网页。</li>
+<li><code>iframe</code>嵌套标签，理解是在当前页面嵌入一个页面。目前用的较少，相关笔记回家再补。</li>
+<li><code>form</code>标签，既可以实现GET也可以实现POST。<code>action</code>标签决定请求路径，<code>method</code>标签决定请求行为。a标签是发起GET请求。都是跳转页面。</li>
+<li>当存在<code>button</code>元素时，若没有定义<code>input type</code>，则<code>button</code>会自动升级为提交按钮。</li>
+<li><code>JavaScript伪协议</code>是为了能够在html中执行<code>javascript代码</code>，或者是可以在点击<code>a</code>标签时，页面没有跳转。</li>
+<li>关于<code>table</code>标签需要回去再复习一下，这里做个标记<br>—————————分割线又来了———————————–<h2 id="补充的一些知识"><a href="#补充的一些知识" class="headerlink" title="补充的一些知识"></a>补充的一些知识</h2></li>
+<li><code>iframe</code>，例如js bin，你写的代码都是放在<code>iframe</code>标签中展示。不信可以去js.jirengu.com去检查</li>
 </ol>
 <ul>
-<li>用iframe嵌套QQ的官网<code>&lt;iframe src=&quot;http://qq.com&quot;frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code></li>
-<li>iframe标签中，当src=”#”，意味当前页面为空</li>
-<li>a标签中的target如果指向iframe标签的name，即在iframe中打开a标签的网址</li>
-<li>iframe标签中，src也可以写相对路径。（HTML续第四个视频07:20）</li>
+<li>用<code>iframe</code>嵌套QQ的官网<code>&lt;iframe src=&quot;http://qq.com&quot;frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code></li>
+<li><code>iframe</code>标签中，当<code>src=&quot;#&quot;</code>，意味当前页面为空</li>
+<li><code>a</code>标签中的<code>target</code>如果指向<code>iframe</code>标签的<code>name</code>，即在<code>iframe</code>中打开<code>a</code>标签的网址</li>
+<li><code>iframe</code>标签中，<code>src</code>也可以写相对路径。（HTML续第四个视频07:20）</li>
 </ul>
 <ol>
-<li>a标签。blank,self,parent,top都已经说过了（HTML续第四个视频10:12）</li>
+<li><code>a</code>标签。blank,self,parent,top都已经说过了（HTML续第四个视频10:12）</li>
 </ol>
 <ul>
-<li>a标签也可以进行下载，不进行展示页面，单纯的去下载</li>
-<li>如果<code>content-type: applicatiom/octet-stream</code>时，浏览器接收到请求后就会下载，而不是展现。否则就使用a标签的下载吧。</li>
-<li>a标签的href可以写些什么？<br>不可以写成<code>&lt;a href=&quot;qq.com&quot;&gt;QQ&lt;/a&gt;</code>会把qq.com当成文件<br>可以写成<code>&lt;a href=&quot;http://qq.com&quot;&gt;QQ&lt;/a&gt;</code><br>可以写成<code>&lt;a href=&quot;//qq.com&quot;&gt;QQ&lt;/a&gt;</code>，这个是无协议绝对地址。会根据文件当前协议，就用什么协议。一般还是指定http<br>建议运行http-server -c-1，清缓存<br>也可以写相对路径。比如当你href=”xxx.html”，而你现在是处于127.0.0.1:8080/index.html，访问a标签之后，就会跳转为127.0.0.1:8080/xxxhtml而不是127.0.0.1:8080/index.html/xxx.html<br>如果href后写的是#xxx，为锚点作用，是页面内的跳转，不会发起请求<br>如果href后写的是?name=xxx，则会发起get 请求。`GET /index.html?name=xxx HTTP/1.1</li>
-<li>伪协议<br><code>&lt;a href=&quot;javascript: alert(1);&quot;&gt;QQ&lt;/a&gt;</code>此时点击QQ，就会显示JS代码。这个伪协议不存在URL。<br><code>&lt;a href=&quot;javascript: ;&quot;&gt;QQ&lt;/a&gt;</code>是为了点击a标签后，页面什么也不做。<br>这时有问到：用#锚点不就行了吗？  –不行的，锚点还是会移动页面到锚点位置，如页面最上方<br>a标签没有href就成了span了。如果<code>href=&quot;&quot;</code>，空的href会使页面刷新，跳转到自身。<br><code>&lt;a href=&quot;javascript: &quot;&gt;QQ&lt;/a&gt;</code>如果这样写，在写url时写了javascript:xxxx，就会执行js</li>
+<li><code>a</code>标签也可以进行下载，不进行展示页面，单纯的去下载</li>
+<li>如果<code>content-type: applicatiom/octet-stream</code>时，浏览器接收到请求后就会下载，而不是展现。否则就使用<code>a</code>标签的下载吧。</li>
+<li><code>a</code>标签的<code>href</code>可以写些什么？<ol>
+<li>不可以写成<code>&lt;a href=&quot;qq.com&quot;&gt;QQ&lt;/a&gt;</code>会把qq.com当成文件</li>
+<li>可以写成<code>&lt;a href=&quot;http://qq.com&quot;&gt;QQ&lt;/a&gt;</code></li>
+<li>可以写成<code>&lt;a href=&quot;//qq.com&quot;&gt;QQ&lt;/a&gt;</code>，这个是无协议绝对地址。会根据文件当前协议，就用什么协议。一般还是指定http</li>
+<li>建议运行<code>http-server -c-1</code>，清缓存</li>
+<li>也可以写相对路径。比如当你<code>href=&quot;xxx.html&quot;</code>，而你现在是处于127.0.0.1:8080/index.html，访问a标签之后，就会跳转为127.0.0.1:8080/xxxhtml而不是127.0.0.1:8080/index.html/xxx.html</li>
+<li>如果<code>href</code>后写的是<code>#xxx</code>，为锚点作用，是页面内的跳转，不会发起请求  </li>
+<li>如果<code>href</code>后写的是<code>?name=xxx</code>，则会发起get 请求。`GET /index.html?name=xxx HTTP/1.1</li>
+</ol>
+</li>
+<li>伪协议<ol>
+<li><code>&lt;a href=&quot;javascript: alert(1);&quot;&gt;QQ&lt;/a&gt;</code>此时点击QQ，就会显示JS代码。这个伪协议不存在URL。</li>
+<li><code>&lt;a href=&quot;javascript: ;&quot;&gt;QQ&lt;/a&gt;</code>是为了点击<code>a</code>标签后，页面什么也不做。</li>
+<li>这时有问到：用#锚点不就行了吗？  –不行的，锚点还是会移动页面到锚点位置，如页面最上方</li>
+<li>a标签没有href就成了span了。如果<code>href=&quot;&quot;</code>，空的href会使页面刷新，跳转到自身。</li>
+<li><code>&lt;a href=&quot;javascript: &quot;&gt;QQ&lt;/a&gt;</code>如果这样写，在写url时写了javascript:xxxx，就会执行js</li>
+</ol>
+</li>
 </ul>
 <ol>
-<li>form标签</li>
+<li><code>form</code>标签</li>
 </ol>
 <ul>
-<li>form标签可以GET也可以POST，a标签只可以GET</li>
-<li>form标签里面如果没有提交按钮，就无法提交</li>
-<li>action元素是目标地址，类似href。method元素管理行为，默认是GET，可以改为POST</li>
-<li>可以用来进行登录提交账户名和密码，html中只有form标签让我们上传内容。（复习到最后一个视频06:06，太困了先睡了zzz）</li>
+<li><code>form</code>标签可以GET也可以POST，<code>a</code>标签只可以GET</li>
+<li><code>form</code>标签里面如果没有提交按钮，就无法提交</li>
+<li><code>action</code>元素是目标地址，类似<code>href</code>。<code>method</code>元素管理行为，默认是GET，可以改为POST</li>
+<li>可以用来进行登录提交账户名和密码，html中只有<code>form</code>标签让我们上传内容。（复习到最后一个视频06:06，太困了先睡了zzz）</li>
+<li>如果不是https，只要有人监听就可以知道你上传的内容</li>
+<li>上传时，上传的数据会变相应的编码语言，多为Utf8</li>
+<li>如果<code>form</code>标签中，没有提交按钮，就无法提交了</li>
+<li><code>input</code>部分的<code>name</code>会带入到提交的第四部分，并且其中的<code>name</code>会带入到上传的key</li>
+<li>file协议不支持post</li>
+<li>GET用<code>a</code>标签，POST用form标签</li>
+<li><code>method</code>仅可以写GET和POST，不支持其他</li>
+<li>如果<code>method</code>写的GET，那么我们所写的参数不会放在请求的第四部分，而是作为查询参数放在请求的第一部分</li>
+<li><code>form</code>标签想实现有查询参数时，应把查询参数写在<code>form action</code>中</li>
+<li>无法让GET请求有第四部分</li>
+<li><code>form</code>标签也有<code>target</code>，用法和<code>a</code>标签一样</li>
+<li><code>name</code>写什么，显示的提交就是什么。如<code>name=&quot;xxx&quot;</code>提交时检查就可以看到提交的信息xxx=</li>
+<li>如果想在提交的文本前显示文本类别，应在<code>input type</code>前写上，如<code>用户名&lt;input type=&quot;text&quot; name=&quot;xxx&quot;&gt;</code></li>
 </ul>
+<ol>
+<li><code>input</code>标签</li>
+</ol>
+<ul>
+<li>难点在于type</li>
+<li><p><code>button</code>与<code>input type=submit</code>区别在于：</p>
+<ol>
+<li>如果一个<code>form</code>只有一个按钮，它的<code>input type是button</code>，它则是一个普通按钮，无法提交。除非改成<code>submit</code>。</li>
+<li>如果用的是<code>button</code>标签而不是<code>input type=button</code>，那么这个<code>button</code>标签会自动升级为提交按钮（前提是没有在<code>button</code>标签里写<code>button type=button</code>，否则将变成无提交功能的按钮，也就没啥用了）</li>
+<li><p><code>&lt;input type=&quot;checkbox&quot;&gt;爱我</code>，就是一个勾选的东西，一般需在右边写上勾选的文字。如果希望在点“爱我”两个字的时候，会勾选上应该用上label标签<code>&lt;input type=&quot;checkbox&quot; id=&quot;xxx&quot;&gt;&lt;label for=&quot;xxx&quot;&gt;爱我&lt;/label&gt;</code>，这里要注意，如果没有写<code>name=&quot;loveme&quot;</code>，则不会把请求发送给服务器，也就不知道是否有勾选。还可以加一个<code>value=&quot;yes&quot;</code>，点击勾选后会看到源代码是<code>loveme=yes</code></p>
+<ul>
+<li>还可以写<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">喜欢的水果</div><div class="line">&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;fruit&quot; value=&quot;orange&quot;&gt;桔子&lt;/label&gt;</div><div class="line">&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;fruit&quot; value=&quot;orange&quot;&gt;桔子&lt;/label&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>来实现多选框，需要是同一个name</p>
+</li>
+<li><code>label for</code>和<code>input</code>标签里的<code>id</code>元素对应，如果不想写<code>id</code>，可以用<code>label</code>把<code>input</code>包起来，也能实现。</li>
+<li><code>input type=&quot;radio&quot;&gt;</code>就是一个可以点击的圆点，它和checkbox不一样。它用于单选框比较多。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">    &lt;label&gt;&lt;input name=&quot;loveme&quot; type=&quot;radio&quot; value=&quot;yes&quot;&gt;YES&lt;/label&gt;</div><div class="line">    &lt;label&gt;&lt;input name=&quot;loveme&quot; type=&quot;radio&quot; value=&quot;no&quot;&gt;no&lt;/label&gt;</div><div class="line">    这样就可以实现单选，同样的name是为了不让他们同时被选中</div><div class="line">5. `select`标签，下拉列表标签</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><select name="分组"><br>  <option valve="">-</option><br>  <option valve="1">第一组</option><br>  <option valve="2">第二组</option><br>  <option valve="3" disabled>第三组</option><br>  <option valve="4" selected>第四组</option></select></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">  - 第二行是表示空值，也就是可以什么都不选。第五行是表示不可以被选中。第六行是表示打开页面时默认选中该组。</div><div class="line">- 还有个用法</div></pre></td></tr></table></figure>
+<p><select name="分组" multiple><br>  <option valve="">-</option><br>  <option valve="1">第一组</option><br>  <option valve="2">第二组</option><br>  <option valve="3" disabled>第三组</option><br>  <option valve="4" selected>第四组</option><br>```</select></p>
+</li>
+<li>即可以被多选</li>
+</ul>
+<ol>
+<li><code>textarea</code>标签<br><code>&lt;textarea style=&quot;resize:none; width:200px;height:100px;&quot; name=&quot;爱好&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;</code><br><code>resize</code>表示不可以改变这个文本框的大小。文本框的宽高可以用css来做，也可以用<code>cols</code>和<code>rows</code><ul>
+<li>textarea一定要给个name</li>
+</ul>
+</li>
+<li><code>table</code>标签<ul>
+<li>HTML规定<code>table</code>只能有<code>thead</code>,<code>tbody</code>,<code>tfoot</code>,<code>colgroup</code>.</li>
+<li>标题用<code>th</code>，数据用<code>td</code></li>
+<li><code>colgroup</code>用于每一列的宽度。</li>
+<li><code>border</code>用于是不是有边框</li>
+<li><code>col</code>中还可以写<code>bgcolor</code></li>
+<li>注意事项：<ul>
+<li>无论<code>tfoot</code>,<code>thead</code>,<code>tbody</code>怎么写代码，顺序都是头身体脚</li>
+<li>如果没有<code>tbody</code>，浏览器会自动补全</li>
+<li>可以没有<code>thead</code>和<code>tfoot</code>，会把内容都放进<code>tbody</code>中，但是顺序就是写的顺序了，没有头身体脚的顺序了。</li>
+<li><code>table border</code>默认有空间，也就是两条线之间是有空间的。用<code>collapse</code>可以合并。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
