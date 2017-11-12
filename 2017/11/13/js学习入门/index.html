@@ -172,8 +172,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2017-11-12T11:30:59.454Z" itemprop="datePublished">
-          2017-11-12
+      <time datetime="2017-11-12T16:18:03.055Z" itemprop="datePublished">
+          2017-11-13
       </time>
     
 </span>
@@ -181,20 +181,70 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p><img src="https://i.loli.net/2017/11/09/5a03dcb00fac6.png" alt="摸头的体育委员"><br><img src="https://i.loli.net/2017/11/09/5a03e21e02501.png" alt="爱指人的体育老师"><br><img src="https://i.loli.net/2017/11/09/5a042cda3613c.jpg" alt="计数排序"></p>
+      		<h2 id="js学习入门"><a href="#js学习入门" class="headerlink" title="js学习入门"></a>js学习入门</h2><p><a href="https://github.com/rccoder/blog/issues/15" target="_blank" rel="external">引用自</a></p>
+<h3 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h3><ul>
+<li>注意：在JavaScript第一个版本released的的时候<code>var</code>这个关键词就是可以使用的。在<code>ES6（ES 2015</code>以及之后的版本中出现了<code>let</code>和<code>const</code>关键词<h4 id="var，let，const区别"><a href="#var，let，const区别" class="headerlink" title="var，let，const区别"></a>var，let，const区别</h4></li>
+</ul>
+<ol>
+<li>根据引用文章，了解到，<code>var</code>可以在封闭的函数作用域进行声明，但是如果不在封闭的函数作用域进行声明，这个声明就将是全局的。它没有块级作用域的概念。</li>
+<li><code>let</code>与<code>var</code>区别在于，<code>let</code>不仅在函数中封闭，也在块语句封闭，即在<code>{</code> 与<code>}</code>包裹着的所有语句中。</li>
+<li><code>const</code>的声明，只能在初始化时赋值给变量，是无法改变被<code>const</code>声明的变量的值的。</li>
+</ol>
+<h4 id="if语法"><a href="#if语法" class="headerlink" title="if语法"></a>if语法</h4><ol>
+<li>if后跟的条件需要用<code>(``)</code>包裹。若true or false后的语句存在多层，应用<code>{``}</code>块级符号包裹<h4 id="hash语法"><a href="#hash语法" class="headerlink" title="hash语法"></a>hash语法</h4></li>
+<li>用<code>[``]</code>是一种简写，可以省略数组内的变量（从0开始）<h4 id="js语法"><a href="#js语法" class="headerlink" title="js语法"></a>js语法</h4></li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">div1 = document.createElement(&apos;div&apos;)</div><div class="line">x.appendChild(div1)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>意思为在id为<code>&#39;x&#39;</code>的父元素中添加一个<code>div</code>元素。</li>
+<li><p>这里为什么要叫div1呢，因为这是容器的名字，随便叫什么都可以，无需纠结。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">index = 0</div><div class="line">while(index&lt; keys[&apos;length&apos;])&#123;</div><div class="line">  div1 = document.createElement(&apos;div&apos;)</div><div class="line">  x.appendChild(div1)</div><div class="line">  index = index+1</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建三个div</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">index = 0</div><div class="line">  while(index&lt; keys[&apos;length&apos;])&#123;</div><div class="line">  div1 = document.createElement(&apos;div&apos;)</div><div class="line">  x.appendChild(div1)</div><div class="line">  z = document.createElement(&apos;kbd&apos;)</div><div class="line">  div1.appendChild(z)</div><div class="line">  index = index+1</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>每个div内有一个kbd</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">index = 0</div><div class="line">while(index&lt; keys[&apos;length&apos;])&#123;</div><div class="line">  div1 = document.createElement(&apos;div&apos;)</div><div class="line">  main1.appendChild(div1)</div><div class="line">  index2 = 0</div><div class="line">  while(index2&lt;10)&#123;</div><div class="line">    kbd1 = document.createElement(&apos;kbd&apos;)</div><div class="line">    kbd1.textContent = &apos;hi&apos;</div><div class="line">    div1.appendChild(kbd1)</div><div class="line">    index2 = index2+1</div><div class="line">  &#125;</div><div class="line">  index = index+1</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>每个div內生成10个kbd</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">index = 0</div><div class="line">while(index&lt; keys[&apos;length&apos;])&#123;</div><div class="line">  div1 = document.createElement(&apos;div&apos;)</div><div class="line">  main1.appendChild(div1)</div><div class="line">  row = keys[index]</div><div class="line">  index2 = 0</div><div class="line">  while(index2&lt; row[&apos;length&apos;])&#123;</div><div class="line">    kbd1 = document.createElement(&apos;kbd&apos;)</div><div class="line">    kbd1.textContent = &apos;hi&apos;</div><div class="line">    div1.appendChild(kbd1)</div><div class="line">    index2 = index2+1</div><div class="line">  &#125;</div><div class="line">  index = index+1</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>每个div内生成不一样多的kbd</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">index = 0</div><div class="line">while(index&lt; keys[&apos;length&apos;])&#123;</div><div class="line">  div1 = document.createElement(&apos;div&apos;)</div><div class="line">  main1.appendChild(div1)</div><div class="line">  row = keys[index]</div><div class="line">  index2 = 0</div><div class="line">  while(index2&lt; row[&apos;length&apos;])&#123;</div><div class="line">    kbd1 = document.createElement(&apos;kbd&apos;)</div><div class="line">    kbd1.textContent = row[index2]</div><div class="line">    div1.appendChild(kbd1)</div><div class="line">    index2 = index2+1</div><div class="line">  &#125;</div><div class="line">  index = index+1</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>不仅更改了生成的div中的kbd数量，并且让每个kbd的内容也根据数组改变。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">document.onkeypress = function(zzzzzzz)&#123;</div><div class="line">  key = zzzzzzz[&apos;key&apos;]</div><div class="line">  website = hash[key]</div><div class="line">  console.log(website)</div><div class="line">  //location.href = &apos;http://&apos;+website</div><div class="line">  window.open(&apos;http://&apos;+website,&apos;_blank&apos;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>function</code>后的括号内容是随便取得，这是一个hash的名字，包含我们按键的所有信息</p>
+</li>
+<li>监听的部位可能是错的，多换对象重试</li>
+<li>多用<code>console.log</code>调试js</li>
+<li><code>location.href = &#39;http://&#39;+website</code>表示在当前页面打开。</li>
+<li><p><code>window.open</code>括号内很眼熟吧，就不多说了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">button1 = document.createElement(&apos;button&apos;)//1</div><div class="line">button1.textContent = &apos;编辑&apos;//2</div><div class="line">button1.id = row[index2]//3</div><div class="line">button1.onclick = function(xxxxxxx)&#123;//4</div><div class="line">  key = xxxxxxx[&apos;target&apos;][&apos;id&apos;]//5</div><div class="line">  p = prompt(&apos;请输入您想更改的网址链接&apos;)//6</div><div class="line">  hash[key] = p//7</div><div class="line">&#125;//8</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建button，第四，五行告诉我们用户点击了哪个button，并且在第六行编辑网址，更改了hash中的key对应的网址。</p>
+</li>
+<li><code>xxxxxxx.target</code>表示被用户点击的按钮，不用<code>button1</code>是因为它只是一个容器，在二十六个循环中，也只有一个<code>button1</code>，只是容器内的值一直在变化。如果写的是<code>button1</code>，就会一直调用循环最后<code>button1</code>内的值。</li>
+<li><p>目前还有问题，用户更改之后再刷新，无法存储用户的更改。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hashInLocalStorage = JSON.parse(localStorage.getItem(&apos;uuu&apos;) || &apos;null&apos;) </div><div class="line">if(hashInLocalStorage)&#123;</div><div class="line">  hash = hashInLocalStorage</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>localStorage.setItem(&#39;uuu&#39;,JSON.stringify(hash))</code>只要这个hash变了，就把hash存在’uuu’中。也就是把hash备份在uuu这个桶里。</p>
+</li>
+<li>上方的代码串作用是每次刷新页面，如果localStorage不为空，就把里面的hash替换掉js里写的hash，实现保存功能。</li>
+</ul>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2017/11/13/js学习入门/" style="float: left;">
-        ← 
-    </a>
     
-    
-    <a class="pull-right" href="/2017/11/07/总结课笔记/">
-        总结课笔记 →
+    <a class="pull-right" href="/2017/11/12/排序流程图/">
+         →
     </a>
     
 </nav>
