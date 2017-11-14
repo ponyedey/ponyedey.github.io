@@ -234,8 +234,48 @@
 </li>
 <li><p><code>localStorage.setItem(&#39;uuu&#39;,JSON.stringify(hash))</code>只要这个hash变了，就把hash存在’uuu’中。也就是把hash备份在uuu这个桶里。</p>
 </li>
-<li>上方的代码串作用是每次刷新页面，如果localStorage不为空，就把里面的hash替换掉js里写的hash，实现保存功能。</li>
+<li>上方的代码串作用是每次刷新页面，如果localStorage不为空，就把里面的hash替换掉js里写的hash，实现保存功能。<h4 id="渐变色"><a href="#渐变色" class="headerlink" title="渐变色"></a>渐变色</h4></li>
+<li>需要取最初的和最尾端的颜色，去搜索css Gradient Generator进行渐变色的操作。</li>
+<li><p>边框外的边框，用box-shadow。<code>box-shadow: 0 0 0px 1px red;</code>这个<code>0px</code>是指不让边框模糊，而后的<code>1px</code>是让向外延伸1px。如果想再扩展一层，可以写成<code>box-shadow: 0 0 0 1px red, 0 0 0 2px black;</code>若在键盘下方再做阴影，则为<code>box-shadow: 0 0 0 1px red, 0 0 0 2px black,0 3px 0 2px white;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">display: inline-flex;</div><div class="line">align-items: center;</div><div class="line">justify-content: center;</div></pre></td></tr></table></figure>
+</li>
+<li><p>可令我们做的键盘内的文字局中。</p>
+</li>
+<li><code>kbd1.className = &#39;key&#39;</code>改名。</li>
+<li>由于之前学到，inline元素之间如果有回车，显示出来就会有空格。<h4 id="让一个元素绝对局中"><a href="#让一个元素绝对局中" class="headerlink" title="让一个元素绝对局中"></a>让一个元素绝对局中</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">display: flex;</div><div class="line">align-items: center;</div><div class="line">justify-content: center;</div></pre></td></tr></table></figure>
+</li>
 </ul>
+<h4 id="如何让main和body的高度占满整个屏幕"><a href="#如何让main和body的高度占满整个屏幕" class="headerlink" title="如何让main和body的高度占满整个屏幕"></a>如何让main和body的高度占满整个屏幕</h4><ul>
+<li>需要给body一个高度，100vn是屏幕的高度。<h4 id="背景图"><a href="#背景图" class="headerlink" title="背景图"></a>背景图</h4></li>
+</ul>
+<ol>
+<li>背景图尽量不要太大；</li>
+<li>背景图用自适应，<code>background-size: cover;</code></li>
+<li><code>background</code>有六个样式。<h4 id="关于logo"><a href="#关于logo" class="headerlink" title="关于logo"></a>关于logo</h4></li>
+</ol>
+<ul>
+<li>一般都是在目标网址的/favicon.ico地址</li>
+<li>如果img的src写作空，就相当于src等于当前页面</li>
+</ul>
+<h4 id="若有图标无法显示"><a href="#若有图标无法显示" class="headerlink" title="若有图标无法显示"></a>若有图标无法显示</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">if(hash[row[index2]])&#123;</div><div class="line">  img1.src = &apos;http://&apos;+hash[row[index2]] + &apos;/favicon.ico&apos;</div><div class="line">&#125;else&#123;</div><div class="line">  img1.src = &apos;//i.loli.net/2017/11/14/5a0ace9e26e8c.gif&apos;</div><div class="line">&#125;</div><div class="line">img1.onerror = function(aaa)&#123;</div><div class="line">  aaa.target.src = &apos;//i.loli.net/2017/11/14/5a0ace9e26e8c.gif&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>最后行为若有该地址，但是被拒绝访问icon，则也显示我们准备的图标。</p>
+<h4 id="如何做到更改地址后，图标一同更改而不用刷新"><a href="#如何做到更改地址后，图标一同更改而不用刷新" class="headerlink" title="如何做到更改地址后，图标一同更改而不用刷新"></a>如何做到更改地址后，图标一同更改而不用刷新</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">button1.onclick = function(xxxxxxx)&#123;</div><div class="line">  button2 = xxxxxxx[&apos;target&apos;]</div><div class="line">  img2 = button2.previousSibling</div><div class="line">  key = button2[&apos;id&apos;]</div><div class="line">  p = prompt(&apos;请输入您想更改的网址链接&apos;)</div><div class="line">  hash[key] = p</div><div class="line">  img2.src = &apos;http://&apos;+p + &apos;/favicon.ico&apos;</div><div class="line">  img1.onerror = function(aaa)&#123;</div><div class="line">  aaa.target.src = &apos;//i.loli.net/2017/11/14/5a0ace9e26e8c.gif&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>找到button2对应的img2，也就是点击了这个按钮后，找到对应的图标，然后更改图标的地址。</p>
+<h4 id="函数封装"><a href="#函数封装" class="headerlink" title="函数封装"></a>函数封装</h4></li>
+</ul>
+<ol>
+<li>就好比是把x带入到f(x)中一样。</li>
+<li>如果在创建元素的同时，还想附带定义这个元素的一些标签，可以如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function c(tagName,attributes)&#123;</div><div class="line">  var element = document.createElement(tagName)</div><div class="line">  for(var key in attributes)&#123;</div><div class="line">    element[key] = attributes[key]</div><div class="line">  &#125;</div><div class="line">return element</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>打个比方，如果我输入了<code>c(&#39;div&#39;,{className:&#39;row&#39;})</code>，这个函数首先会先创建div，然后会把输入的这个hash里的所有元素拿出来，放到创建的元素中去。<code>key</code>对应我们输入的hash数组里的这个元素的所有信息，就好比是一一对应生成。<h4 id="for循环和while循环的关系"><a href="#for循环和while循环的关系" class="headerlink" title="for循环和while循环的关系"></a>for循环和while循环的关系</h4></li>
+</ul>
+<ol>
+<li>for循环将while循环的三部分提炼出来，也就是定义，条件，以及再加1后为主要部分，用()抱起来，然后中间的其他操作在后面的花括号包裹起来</li>
+</ol>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
